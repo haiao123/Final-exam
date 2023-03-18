@@ -26,7 +26,7 @@ export default function Supplier({ Supplier }) {
 // STEP 1: This function will be executed at the server before loading the page.
 export async function getServerSideProps({ params }) {
   console.debug('params', params)
-  const res = await fetch(`http://localhost:3000/api/supplier/suppliers/${params.id}`)
+  const res = await fetch(`https://final-exam-728u-29vqi1t5l-haiao123.vercel.app/api/supplier/suppliers/${params.id}`)
   const supplier = await res.json()
   console.debug('supplier 1', supplier)
   return { props: { supplier } }
